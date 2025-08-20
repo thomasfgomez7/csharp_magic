@@ -16,7 +16,7 @@ namespace guiaPractica1
 
             Console.WriteLine(mensaje);
         }
-        
+
         public void ejercicio_2()
         {
             // Declaracion de variables y tipos de datos
@@ -57,7 +57,7 @@ namespace guiaPractica1
             nombre = Console.ReadLine();
 
             Console.Write("Por favor ingrese su apellido: ");
-            apellido = Console.ReadLine();            
+            apellido = Console.ReadLine();
 
             Console.Write("Por favor ingrese su edad: ");
             edad = Convert.ToByte(Console.ReadLine());
@@ -80,7 +80,7 @@ namespace guiaPractica1
             // Pedir al usuario los valores por consola
             Console.Write("Por favor ingrese el total de materias de su carrera: ");
             totalMaterias = Convert.ToByte(Console.ReadLine());
-            
+
             Console.Write("Por favor ingrese el total de materias aprobadas hasta el momento: ");
             materiasAprobadas = Convert.ToByte(Console.ReadLine());
 
@@ -98,7 +98,7 @@ namespace guiaPractica1
             int materiasFaltantes;
 
             // Solicitar valores 
-            Console.WriteLine("El total de materias de la carrera es: " + totalMaterias);            
+            Console.WriteLine("El total de materias de la carrera es: " + totalMaterias);
 
             Console.Write("Por favor ingrese el total de materias aprobadas hasta el momento: ");
             materiasAprobadas = Convert.ToByte(Console.ReadLine());
@@ -176,7 +176,7 @@ namespace guiaPractica1
             notaSegundoParcialTeorico = Convert.ToSingle(Console.ReadLine());
 
             Console.Write("Por favor ingrese la nota del primer parcial práctico: ");
-            notaPrimerParcialPractico= Convert.ToSingle(Console.ReadLine());
+            notaPrimerParcialPractico = Convert.ToSingle(Console.ReadLine());
 
             Console.Write("Por favor ingrese la nota del segundo parcial práctico: ");
             notaSegundoParcialPractico = Convert.ToSingle(Console.ReadLine());
@@ -190,34 +190,91 @@ namespace guiaPractica1
 
             promedioMateria = (notaPrimerParcialTeorico + notaSegundoParcialTeorico + notaPrimerParcialPractico + notaSegundoParcialPractico) / 4;
             Console.WriteLine("Su promedio de la materia es: " + promedioMateria);
-
         }
 
+        public void ejercicio_9()
+        {
+            // Declaramos la única variable
+            int sumatoria = 0;
 
+            // Solicitamos los valores
+            Console.Write("Por favor ingrese el primer valor: ");
+            sumatoria += Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Por favor ingrese el segundo valor: ");
+            sumatoria += Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Por favor ingrese el tercer valor: ");
+            sumatoria += Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Por favor ingrese el cuarto valor: ");
+            sumatoria += Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("La sumatoria de los cuatro valores es: " + sumatoria);
+        }
 
+        public void ejercicio_10()
+        {
+            // Declaracion de variables
+            int materiasAprobadas;
+            int materiasRendidas;
+            float promedio;
+            float ranking;
+            
 
+            // Solicitar valores
+            Console.Write("Ingrese las materias aprobadas: ");
+            materiasAprobadas = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Ingrese las materias rendidas: ");
+            materiasRendidas = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Ingrese su promedio: ");
+            promedio = Convert.ToInt32(Console.ReadLine());
+            
+            // Calculo del ranking
+            ranking = ((materiasAprobadas / materiasRendidas) * 100 + materiasAprobadas * 3 + promedio * 3);
+            Console.Write("Su ranking es el siguiente: " + ranking);
+        }
 
+        public void ejercicio_11()
+        {
+            // Declaracion de variables y constantes
+            const float precioProducto1 = 10;
+            const float precioProducto2 = 22;
+            const float precioProducto3 = 58;
 
+            int cantidadProducto1;
+            int cantidadProducto2;
+            int cantidadProducto3;
 
+            float importePagarProducto1;
+            float importePagarProducto2;
+            float importePagarProducto3;
+            float importeTotal;
 
+            // Solicitar valores al usuario
+            Console.Write("Ingrese la cantidad comprada del producto1: ");
+            cantidadProducto1 = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Ingrese la cantidad comprada del producto2: ");
+            cantidadProducto2 = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Ingrese la cantidad comprada del producto3: ");
+            cantidadProducto3 = Convert.ToInt32(Console.ReadLine());
 
+            // Calculamos el importe 
+            importePagarProducto1 = cantidadProducto1 * precioProducto1;
+            importePagarProducto2 = cantidadProducto2 * precioProducto2;
+            importePagarProducto3 = cantidadProducto3 * precioProducto3;
 
+            Console.WriteLine("El importe a pagar del producto 1 es: " + importePagarProducto1);
+            Console.WriteLine("El importe a pagar del producto 2 es: " + importePagarProducto2);
+            Console.WriteLine("El importe a pagar del producto 3 es: " + importePagarProducto3);
 
+            importeTotal = importePagarProducto1 + importePagarProducto2 + importePagarProducto3;
 
-
-
-
-
-
-
-
+            Console.WriteLine("El importe total a pagar es : " + importeTotal);
+        }
     }
 }
